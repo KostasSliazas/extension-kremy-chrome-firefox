@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Kostas Šliažas">
+  <meta name="theme-color" content="#777777">
+  <meta name="msapplication-TileColor" content="#777777">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; style-src 'self' 'unsafe-inline' data:; script-src 'self'; font-src 'self' data:; img-src 'self' data:; connect-src 'self' https://api.open-meteo.com; media-src 'self' data:;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Project Kitten – Web tools and links</title>
+  <link rel="preload" href="css/style.css" as="style" type="text/css" fetchpriority="high">
+  <link rel="stylesheet" href="css/style.css">
+
+<body>
+  <div id="wrapper">
+    <div class="flexy">
+      <label for="holdDelay">Hold to save delay</label>
+      <select id="holdDelay">
+        <option value="200">Fast (0.2s)</option>
+        <option value="300" selected>Normal (0.3s)</option>
+        <option value="450">Safe (0.45s)</option>
+      </select>
+      <div class="checkbox">
+        <input type="checkbox" id="toggle">
+        <label for="toggle">Enable</label>
+      </div>
+    </div>
+    <div id="data">
+      <h3>Name/Value</h3>
+      <div id="list"></div>
+    </div>
+    <button id="clear">Clear data</button>
+    <script defer src="popup.js"></script>
+  </div>
+</body>
+
+</html>

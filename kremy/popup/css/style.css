@@ -1,0 +1,193 @@
+:root {
+    --color-text: #674373;
+    --color-border: #d7b6b6;
+    --color-bg-button: #e1d1e3;
+    --color-bg-button-hover: #e286ef;
+}
+
+body {
+    font: 16px/1.5 system-ui, -apple-system, "Segoe UI", "Noto Sans", Roboto, "Helvetica Neue", "Liberation Sans", Arial, sans-serif;
+    margin: 8px;
+    color: var(--color-text)
+}
+
+.name {
+    font-weight: 700;
+    width: 150px;
+    margin: 0 4px
+}
+
+.name:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border: 1px solid var(--color-border)
+}
+
+.flexy {
+    display: flex;
+    place-items: center;
+    gap: 4px;
+}
+
+.item,
+.name,
+.value {
+    overflow-y: hidden;
+    overflow-x: auto
+}
+
+.value {
+    width: 150px;
+    flex: 1;
+    margin: 0 4px
+}
+
+h3 {
+    font-size: 1em;
+    margin: 0;
+    border-bottom: 1px solid var(--color-border)
+}
+
+.item {
+    display: flex;
+    white-space: nowrap;
+    line-height: 1;
+    place-items: center;
+    border-bottom: 1px solid var(--color-border)
+}
+
+.item:last-child {
+    border-bottom: 0
+}
+
+button {
+    cursor: pointer;
+    min-height: 2em;
+    min-width: 2em;
+    overflow: hidden;
+    color: var(--color-text);
+    background: var(--color-bg-button);
+    accent-color: var(--color-border);
+    border: 1px solid var(--color-border);
+    width: auto;
+    font-size: inherit;
+    line-height: inherit;
+    box-sizing: border-box;
+    font-family: inherit;
+    transition: background .1s ease;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    appearance: none;
+    margin: 4px 4px 4px 0
+}
+
+button:hover {
+    background: var(--color-bg-button-hover)
+}
+
+#clear {
+    margin-top: 4px
+}
+
+#wrapper {
+    width: 384px;
+    max-height: 480px;
+    padding: 1em;
+    overflow-y: auto
+}
+
+#data {
+    border: 1px solid var(--color-border)
+}
+
+.checkbox input,
+.none {
+    display: none
+}
+
+.checkbox,
+.checkbox label {
+    position: relative;
+    cursor: pointer
+}
+
+.checkbox {
+    display: flex;
+    padding: 4px 0;
+    place-items: center;
+    place-content: flex-end;
+    min-width: 0;
+    flex: 1 1 auto;
+    line-height: 1.5;
+    overflow: hidden;
+    font-size: 16px
+}
+
+.checkbox label {
+    padding-right: 28px;
+    user-select: none
+}
+
+.checkbox label::after,
+.checkbox label::before {
+    content: "";
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.checkbox label::after {
+    border-right: 1px solid transparent;
+    border-top: 1px solid transparent;
+    transform: rotate(135deg)
+}
+
+.checkbox input:checked~label::after {
+    border-color: var(--color-border);
+    width: 10px;
+    height: 10px;
+    transition: border-top-color .1s linear .1s;
+    top: 5px;
+    right: 7px;
+    pointer-events: none
+}
+
+.checkbox label::before,
+select {
+    border: 1px solid var(--color-border)
+}
+
+.checkbox label::before {
+    height: 24px;
+    width: 24px
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font: inherit;
+    color: var(--color-text);
+    background: 0 0;
+    padding: 4px 8px;
+    margin: 4px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: border-color .1s ease, background .1s ease
+}
+
+select:hover {
+    background: var(--color-bg-button-hover)
+}
+
+select:focus {
+    outline: 0;
+    border-color: var(--color-border)
+}
