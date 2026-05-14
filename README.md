@@ -1,8 +1,7 @@
 # extension-kremy-chrome-firefox
 
 Kremy is a browser extension for Chrome and Firefox that automatically saves input field values to local storage and restores them when the page reloads.
-
-The extension works by detecting a short hold/click interaction on input fields, saving the entered content locally in your browser. When you revisit or reload the page, the saved values are automatically restored.
+The extension works by detecting a short hold/click interaction on input fields, saving the entered content locally in your browser.
 
 ## 🚀 Installation
 
